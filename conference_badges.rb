@@ -1,1 +1,25 @@
+require "pry"
+
 # Write your code here.
+def badge_maker (str)
+    "Hello, my name is #{str}."
+end
+
+def batch_badge_creator arr
+    arr.map{|name| "Hello, my name is #{name}."}
+end
+
+def assign_rooms arr
+  arr.each_with_index.map do |name, index|
+    "Hello, #{name}! You'll be assigned to room #{index+1}!"
+  end
+end
+
+def printer arr
+    batch_badge_creator(arr).each do |item|
+        puts item
+    end
+    assign_rooms(arr).each do |item|
+        puts item
+    end
+end
